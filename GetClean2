@@ -1,0 +1,63 @@
+by_package <- group_by(cran, package)
+summarize (by_package, mean(size))
+library(swirl)
+swirl()
+?n
+?n_distinct
+submit()
+ls()
+by_package
+pack_sum <- summarize(by_package,
+count = n(),
+unique = n_distinct(ip_id),
+countries = n_distinct(country),
+avg_bytes = mean(size))
+ls()
+pack_sum
+submit()
+submit()
+submit()
+submit()
+submit()
+submit()
+?????????
+ok
+submit()
+submit()
+reset()
+reset()
+submit()
+pack_sum
+exit()
+q()
+library(swirl)
+swirl()
+quit()
+library(swirl)
+ls()
+swirl()
+pack_sum
+quantile(pack_sum$count, probs = 0.99)
+filter(pack_sum, count > 679)
+top_counts <- filter(pack_sum, count > 679)
+top_counts
+View(top_counts)
+top_counts_sorted <- arrange(top_counts, count)
+top_counts_sorted <- arrange(top_counts, desc(count)
+)
+View(top_counts_sorted)
+quantile(pack_sum$unique, probs = 0.99)
+top_unique <- filter(pack_sum, unique > 465)
+View(top_unique)
+top_unique_sorted <- arrange(top_unique, desc(unique))
+View(top_unique_sorted)
+submit()
+submit()
+?chain
+?cran
+ls()
+cran
+submit()
+View(result3)
+submit()
+submit()
